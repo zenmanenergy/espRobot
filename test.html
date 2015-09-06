@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="assets/js/jquery-1.8.2.js"></script>
+
+<script>
+var connection;
+function connect(){
+	connection = new WebSocket('ws://192.168.1.132:81/test', ['arduino']);
+	connection.onopen = function () {
+		connection.send('Message from Browser to ESP8266 yay its Working!! ' + new Date()); 
+		connection.send('hello');
+	};
+	
+	connection.onerror = function (error) {
+		console.log('WebSocket Error ', error);
+	};
+	
+	connection.onmessage = function (e) {
+		console.log('Server: ', e.data);
+	};
+}
+
+/*
+ * 
+setInterval(function() {
+	connection.send('Time: ' + new Date()); 
+}, 1000);
+
+ */
+</script>
+
+</head>
+<body>
+
+Taylor Robot
+<input type="button" onclick="connect();" value="Connect">
+
+
+</body>
+</html>
