@@ -92,16 +92,17 @@ var connection;
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            [" ", "Connect", "connect"],
+            [" ", "Connect to %m.device", "connect"],
             [" ", "Disconnect", "disconnect"],
             [" ", "Left Wheel Go %m.blockPos", "leftGo", "forward"],
             [" ", "Left Wheel Stop", "leftStop"],
             [" ", "Right Wheel Go %m.blockPos", "rightGo", "forward"],
             [" ", "Right Wheel Stop", "rightStop"],
-            [" ", "Set Speed %m.speed", "setSpeed", 50],
+            //[" ", "Set Speed %m.speed", "setSpeed", 50],
             
         ],
         menus: {
+            device: [1,2,3,4,5,6,7,8,9,10],
             blockPos: ['forward', 'reverse'],
             speed: [10,20,30,40,50,60,70,80,90,100]
         }
