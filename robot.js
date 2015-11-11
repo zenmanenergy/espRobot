@@ -1,6 +1,6 @@
 var connection;
 (function (ext) {
-    	console.log("robot v1");
+    console.log("robot v1");
     // Cleanup function when the extension is unloaded
     
     ext._shutdown = function() {};
